@@ -26,9 +26,9 @@ namespace RSOFTWARESOLUTIONS.Controllers
             {
                 MailMessage message = new MailMessage();
                 SmtpClient smtpClient = new SmtpClient();
-                MailAddress fromAddress = new MailAddress("amit.tiwari.swe@gmail.com"); //change here providing email address
+                MailAddress fromAddress = new MailAddress("email_address"); //change here providing from email address
                 message.From = fromAddress;
-                message.To.Add("amit.tiwari.swe@gmail.com"); //change here providing email address
+                message.To.Add("email_address"); //change here providing to email address
                 message.Subject = "Someone Contact you..!";
                 message.Body = @"<h3><font color='31AAE1'>Follow Below Details : </font></h3><br>
                              <label>Name : </label>" + mailmodel.Name + @"<br/>
@@ -41,7 +41,7 @@ namespace RSOFTWARESOLUTIONS.Controllers
                 smtpClient.Host = "smtp.gmail.com";   // We use gmail as our smtp client
                 smtpClient.Port = 587;
                 smtpClient.UseDefaultCredentials = false;
-                smtpClient.Credentials = new System.Net.NetworkCredential("amit.tiwari.swe@gmail.com", "786anjali"); //change here providing email address,password goes
+                smtpClient.Credentials = new System.Net.NetworkCredential("email_address", "password"); //change here providing email address,password goes
                 smtpClient.EnableSsl = true;
                 smtpClient.Send(message);
                 
