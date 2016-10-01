@@ -1,0 +1,198 @@
+﻿
+
+
+
+body {
+    padding-top: 120px;
+    /*padding-bottom: 20px;*/
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+/*Contact Us CSS*/
+
+#CONTACT_US
+{
+    margin-top:80px;
+    background-color:#18668A;
+    color:#fff;
+  
+}
+
+#cnline{
+width: 20px;
+    border: 1px solid #FFF;
+    vertical-align: middle;
+}
+#cnline2{
+    margin-top:40px;
+     width: 156px;
+    border: 2px solid #31AAE1;
+    vertical-align: middle;
+}
+
+input.empty {
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+}
+
+/* enable absolute positioning */
+.inner-addon { 
+    position: relative; 
+}
+
+/* style icon */
+.inner-addon .glyphicon {
+  position: absolute;
+  padding: 10px;
+  pointer-events: none;
+}
+
+/* align icon */
+.left-addon .glyphicon  { left:  0px;}
+.right-addon .glyphicon { right: 0px;}
+
+/* add padding  */
+.left-addon input  { padding-left:  30px; }
+.right-addon input { padding-right: 30px; }
+
+
+
+/* styles for validation helpers */
+.field-validation-error {
+    color: #b94a48;
+}
+
+.field-validation-valid {
+    display: none;
+}
+
+input.input-validation-error {
+    border: 1px solid #b94a48;
+}
+
+input[type="checkbox"].input-validation-error {
+    border: 0 none;
+}
+
+.validation-summary-errors {
+    color: #b94a48;
+}
+
+.validation-summary-valid {
+    display: none;
+}
+
+#home:before { 
+     display: block;
+    content: "";
+    height: 110px;
+    margin: -60px 0 0;
+}
+#CONTACT_US:before { 
+     display: block;
+    content: "";
+    height: 110px;
+    margin: -60px 0 0;
+}
+#DOMAIN:before { 
+     display: block;
+    content: "";
+    height: 110px;
+    margin: -60px 0 0;
+}
+#VISION:before { 
+     display: block;
+    content: "";
+    height: 110px;
+    margin: -60px 0 0;
+}
+#ABOUT_US:before { 
+     display: block;
+    content: "";
+    height: 110px;
+    margin: -60px 0 0;
+}
+#SERVICES:before { 
+     display: block;
+    content: "";
+    height: 110px;
+    margin: -60px 0 0;
+}
+#RND:before { 
+     display: block;
+    content: "";
+    height: 110px;
+    margin: -60px 0 0;
+}
+
+
+/*ul.nav li.dropdown:hover ul.dropdown-menu{ display: block; }
+
+.nav .dropdown-toggle .caret { display:none; }*/
+
+ul.nav li.dropdown:hover > ul.dropdown-menu{
+    display: block;
+    margin: 0;
+}
+
+@media (max-width: 991px) {
+    body {
+       padding-top: 140px;
+    }
+#home:before { 
+     display: block;
+    content: "";
+    height: 120px;
+    margin: 0px 0 0;
+}
+#CONTACT_US:before { 
+    display: block;
+    content: "";
+    height: 120px;
+    margin: 0px 0 0;
+}
+#DOMAIN:before { 
+      display: block;
+    content: "";
+    height: 120px;
+    margin: 0px 0 0;
+}
+#VISION:before { 
+ display: block;
+    content: "";
+    height: 120px;
+    margin: 0px 0 0;
+}
+#ABOUT_US:before { 
+ display: block;
+    content: "";
+    height: 120px;
+    margin: 0px 0 0;
+}
+#SERVICES:before { 
+     display: block;
+    content: "";
+    height: 120px;
+    margin: 0px 0 0;
+}
+#RND:before { 
+    display: block;
+    content: "";
+    height: 120px;
+    margin: 0px 0 0;
+}
+}

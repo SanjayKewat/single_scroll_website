@@ -1,0 +1,45 @@
+﻿
+<script src="~/Scripts/jquery-2.2.1.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+  
+<section id="CONTACT_US" style="display:none;">
+     
+    <div class="row">
+       <center><div id="cnline"></div></center>
+        <center><h1>Contact Us <span style="color:#31AAE1">.</span></h1></center>
+        <center><div id="cnline2"></div></center>
+
+
+    </div>
+  
+        
+      <div class="row" style="margin-top:40px; padding-bottom:40px;">
+          <table class="table table-responsive">
+
+              <tbody>
+                  <tr>
+                      <td class="pull-right"><div class="inner-addon left-addon"><i class="glyphicon glyphicon-user"></i><input type="text" class="form-control" data-val=”true” data-val-required="The Name field is required." placeholder="Name" /></div></td>
+                      <td rowspan="3">
+                          <div class="inner-addon left-addon">
+                              <i class="glyphicon glyphicon-comment"></i>
+                              <textarea style="padding-left:40px;width: 276px; height: 169px;" rows="6" cols="40" class="form-control" data-val=”true” data-val-required="The Message field is required." placeholder="Write Message"></textarea>
+                          </div>
+                      </td>
+                  </tr>
+                  <tr>
+                      <td class="pull-right"><div class="inner-addon left-addon"><i class="glyphicon glyphicon-envelope"></i><input type="text" class="form-control" data-val=”true” data-val-required="The Email Address field is required." placeholder="Email Address"/></div></td>
+                      @*<td><div class="inner-addon left-addon"><i class="glyphicon glyphicon-user"></i><input type="text" class="form-control" /></div></td>*@
+                  </tr>
+                  <tr>
+                      <td class="pull-right"><div class="inner-addon left-addon"><i class="glyphicon glyphicon-earphone"></i><input type="text" class="form-control" placeholder="Phone" data-val=”true” data-val-required="The Phone field is required." /></div></td>
+                      @*<td><div class="inner-addon left-addon"><i class="glyphicon glyphicon-user"></i><input type="text" class="form-control" /></div></td>*@
+                  </tr>
+              </tbody>
+          </table>
+
+         <center style="margin-top:40px;"><input type="submit"  class="btn btn-large btn-primary" value="Send Message" /> @*<button class="btn btn-large btn-primary" type="button">Send Message</button>*@</center>
+      </div>
+</section>
+
+

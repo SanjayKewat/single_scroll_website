@@ -1,0 +1,65 @@
+﻿@model RSOFTWARESOLUTIONS.Models.MailModel
+
+
+<link href="~/Content/Site.css" rel="stylesheet" />
+<link href="~/sweetalert/sweetalert.css" rel="stylesheet" />
+
+<section id="CONTACT_US" style="display:none;">
+
+    <div class="row">
+        <center><div id="cnline"></div></center>
+        <center><h1>Contact Us <span style="color:#31AAE1">.</span></h1></center>
+        <center><div id="cnline2"></div></center>
+
+
+    </div>
+
+
+    <div class="row" style="margin-top:40px; padding-bottom:40px;">
+
+        @using (Html.BeginForm("Index", "HOME", FormMethod.Post))
+        {
+            @Html.AntiForgeryToken()
+            @Html.ValidationSummary(true)
+
+            <table class="table table-responsive">
+
+                <tbody>
+                    <tr>
+                        <td class="pull-right"><div class="inner-addon left-addon"><i class="glyphicon glyphicon-user"></i>@Html.TextBoxFor(model => model.Name, new { @class = "form-control", placeholder = "Name" })@Html.ValidationMessageFor(model => model.Name," ")</div></td>
+                        <td rowspan="3">
+                            <div class="inner-addon left-addon">
+                                <i class="glyphicon glyphicon-comment"></i>@Html.TextAreaFor(model => model.Msg, new { style = "padding-left:40px;width: 276px; height: 169px;", @class = "form-control", rows = "6", cols = "40", placeholder = "Write Message" })
+                                @Html.ValidationMessageFor(model => model.Msg, " ")
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="pull-right"><div class="inner-addon left-addon"><i class="glyphicon glyphicon-envelope"></i>@Html.TextBoxFor(model => model.mail_address, new { @class = "form-control", placeholder = "Email Address" })@Html.ValidationMessageFor(model => model.mail_address, " ") </div></td>
+                        @*<td><div class="inner-addon left-addon"><i class="glyphicon glyphicon-user"></i><input type="text" class="form-control" /></div></td>*@
+                    </tr>
+                    <tr>
+                        <td class="pull-right"><div class="inner-addon left-addon"><i class="glyphicon glyphicon-earphone"></i>@Html.TextBoxFor(model => model.Phone, new { @class = "form-control", placeholder = "Phone" }) @Html.ValidationMessageFor(model => model.Phone, " ")</div></td>
+                        @*<td><div class="inner-addon left-addon"><i class="glyphicon glyphicon-user"></i><input type="text" class="form-control" /></div></td>*@
+                    </tr>
+                </tbody>
+            </table>
+
+            <center style="margin-top:40px;"><input type="submit" class="btn btn-large btn-primary" value="Send Message" /></center><br />
+            <center>@Html.ValidationSummary(false, "Please fix the following errors and then submit the form")</center>
+        }
+    </div>
+</section>
+<script src="~/Scripts/jquery-2.2.1.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+<script src="~/sweetalert/sweetalert.min.js"></script>
+<script type="text/javascript">
+    $(function () {
+        var alert_data = '@TempData["notice"]';
+        if (alert_data != '') {           
+            swal("Thankyou.", alert_data, "success");
+        }
+
+    });
+</script>

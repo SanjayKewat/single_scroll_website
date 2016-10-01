@@ -1,0 +1,37 @@
+﻿@{
+    ViewBag.Title = "";
+
+}
+
+@Styles.Render("~/Content/bxslidercss")
+
+@Html.Partial("_homesliderPartial")
+@Html.Partial("_ABOUT_US")
+@{Html.RenderPartial("_VISION");}
+@{Html.RenderPartial("_SERVICES");}
+@{Html.RenderPartial("_RND");}
+@{Html.RenderPartial("_DOMAIN");}
+@*@{Html.RenderPartial("_CONTACT_US");}*@
+@{Html.RenderPartial("_contact_partial");}
+
+
+
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/jquerybxslider")
+
+<script>
+
+    jQuery(document).ready(function ($) {
+
+        $('.bxslider').bxSlider({
+            auto: true,
+            autoHover: true,
+            autoControls: true
+        });
+
+        $('.bxslider').on
+
+    });
+
+
+</script>

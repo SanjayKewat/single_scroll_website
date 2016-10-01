@@ -1,0 +1,143 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3RSOFTWARE SOLUTIONS </title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body>
+    <nav id="myScrollspy" class="navbar navbar-inverse navbar-fixed-top" style="background-color:#34495E" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".bs-js-navbar-scrollspy">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                 <div class="row " style="text-align:center;color:#FFFFFF;padding-right:50px">
+                   
+                    <h3>3RSOFTWARE SOLUTIONS</h3>
+                     <h5>INOVATION FOR THE CHANGING WORLD</h5>
+                </div>
+
+
+                 
+            </div>
+            <br />
+            <div id="nav-collapse" class="collapse navbar-collapse bs-js-navbar-scrollspy">
+                <ul class="nav navbar-nav">
+                    <li><a  href="#home">Home</a></li>
+
+                    <li><a href="#ABOUT_US" aria-label="Left Align" onclick="hide_contact()">ABOUT US</a></li>
+                    <li><a href="#VISION" aria-label="Left Align" onclick="hide_contact()">VISION</a></li>                    
+                    <li><a href="#SERVICES" aria-label="Left Align" onclick="hide_contact()"> SERVICES</a></li>
+                    <li><a href="#RND" aria-label="Left Align" onclick="hide_contact()">R&D</a></li>
+                    <li id="a_domain"><a href="#DOMAIN" aria-label="Left Align" onclick="hide_contact()">OTHER DOMAINS</a></li>
+                    <li><a href="#CONTACT_US" aria-label="Left Align" onclick="show_contact()">CONTACT US</a></li>       
+                  
+                </ul>
+               
+            </div>
+        </div>
+    </nav>
+    <div class="container  container-fluid" data-spy="scroll" data-target="#myScrollspy" data-offset="0">
+
+        @RenderBody()
+   
+    </div>
+    <footer id="site-footer">
+        <div class="row">
+            <div class="col-xs-6">             
+              
+
+                <p id="footer_p" class="text-center">&copy; @DateTime.Now.Year - 3RSOFTWARE SOLUTIONS</p>
+                </div>
+                <div class="col-xs-2">
+                </div>
+                <div class="col-xs-4">
+                    <div id="footer-navigation" class="">
+                        <ul id="menu-footer" class="">
+                            <li class="footer-item"><a href="#" onclick="hide_contact()" class="">Home</a></li>
+                            <li class="footer-item"><a href="#ABOUT_US" onclick="hide_contact()" class="">About</a></li>
+                            <li class="footer-item"><a href="#VISION" onclick="hide_contact()" class="">Vision</a></li>
+                            <li class="footer-item"><a href="#SERVICES" onclick="hide_contact()" class="">Services</a></li>
+                            <li class="footer-item"><a href="#RND" onclick="hide_contact()" class="">R&D</a></li>
+                            <li class="footer-item"><a href="#DOMAIN" onclick="hide_contact()" class="">Other Domains</a></li>
+                            <li class="footer-item"><a href="#CONTACT_US" onclick="show_contact()" class="">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+           
+    </footer>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+
+    @RenderSection("scripts", required: false)
+
+    <script type="text/javascript">
+        $(function () {
+            removeSection = function (e) {
+                $(e).parents(".section").remove();
+
+                $('[data-spy = "scroll"]').each(function () {
+                    var $spy = $(this).scrollspy('refresh')
+                });
+            }
+            $("#myScrollspy").scrollspy();
+
+
+
+            //$("#myScrollspy li a").click(function (event) {
+            //    // check if window is small enough so dropdown is created
+            //    $("#nav-collapse").removeClass("in").addClass("collapse");
+            //});
+
+            $(".nav a").click(function (event) {
+                // check if window is small enough so dropdown is created
+                $("#nav-collapse").removeClass("in").addClass("collapse");
+            });
+
+            //$('ul.dropdown-menu li').on('click', function (event) {
+            //   // $("ul.dropdown-menu").removeClass("in").addClass("collapse");
+            //    //  alert('call');
+
+            //    event.stopPropagation();
+
+            //});
+            $("#nav-collapse .nav navbar-nav li").click(function (event) {
+                // $('li').removeClass('active');
+                alert('call');
+            });
+
+            //$('.nav a').on('click', function () {
+            //    $(".btn-navbar").click(); //bootstrap 2.x
+            //    $(".navbar-toggle").click(); //bootstrap 3.x by Richard
+            //    this.forceUpdate({});
+            //});
+
+
+            //$("#li_contact").removeClass("active").addClass("");
+            //$("#li_home").addClass("active");
+
+            
+        });
+
+        function show_contact()
+        {
+            $('#CONTACT_US').show();
+        }
+
+        function hide_contact()
+        {
+            $('#CONTACT_US').hide();
+        }
+
+    </script>
+</body>
+</html>
+
